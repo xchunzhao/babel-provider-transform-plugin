@@ -14,6 +14,7 @@ describe('index', () => {
             }
         `
         const code2 = `
+            import _ from 'lodash'
             function Bar() {
                 const onClick=() => {}
                 return (
@@ -34,7 +35,7 @@ describe('index', () => {
             plugins: [[plugin, { specific: '_', lib: 'lodash' }]]
         }).code
         
-        console.log(rs1)
+        // console.log(rs1)
         console.log(rs2)
     })
 })
