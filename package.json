@@ -1,0 +1,44 @@
+{
+  "name": "babel-provider-transform-plugin",
+  "version": "1.0.0",
+  "author": "xchunzhao@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xchunzhao/babel-provider-transform-plugin"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "umi-tools build",
+    "test": "umi-tools test --coverage",
+    "debug": "umi-tools test",
+    "lint": "eslint --ext .js src",
+    "prepack": "npm run build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint",
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-react": "^7.10.4",
+    "babel-core": "^6.26.3",
+    "babel-preset-umi": "^1.8.4",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.1",
+    "umi-tools": "^0.4.0"
+  }
+}
